@@ -3,5 +3,6 @@ fn main() {
 }
 
 fn to_camel_case(text: &str) -> String {
-    text.chars()
+    println!("{:?}", &text.chars());
+    text.to_string()
 }
