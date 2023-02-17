@@ -1,3 +1,5 @@
+use inflector::Inflector;
+
 fn main() {
     println!("Hello, world!");
     to_camel_case("ave_maria");
@@ -7,9 +9,10 @@ fn to_camel_case(text: &str) -> String {
     text.to_string();
     let mut counter = 0;
 
-    text.split(&['_', '-']);
+    let mut vecky: String = text.split(&['_', '-']).into_iter().as_str().collect();
+    vecky = vecky.to_title_case();
 
-    println!("{:?}", text);
+    println!("{:?}", vecky);
 
     // for i in text.chars() {
     //     if i == '-' || i == '_' {
