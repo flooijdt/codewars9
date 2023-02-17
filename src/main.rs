@@ -9,8 +9,8 @@ fn to_camel_case(text: &str) -> String {
     text.to_string();
     let mut counter = 0;
 
-    let mut vecky: String = text.split(&['_', '-']).into_iter().as_str().collect();
-    vecky = vecky.to_title_case();
+    let mut vecky: String = text.split(&['_', '-']).collect();
+    vecky = vecky.as_str().to_title_case();
 
     println!("{:?}", vecky);
 
