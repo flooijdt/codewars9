@@ -9,10 +9,13 @@ fn to_camel_case(text: &str) -> String {
 
     text.split(&['_', '-']);
 
-    for i in text.chars() {
-        if i == '-' || i == '_' {
-            text.split(i, "");
-        }
-        counter += 1;
-    }
+    println!("{:?}", text);
+
+    // for i in text.chars() {
+    //     if i == '-' || i == '_' {
+    //         text.split(i, "");
+    //     }
+    //     counter += 1;
+    // }
+    "fim".to_string()
 }
