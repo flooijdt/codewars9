@@ -4,6 +4,15 @@ fn main() {
 }
 
 fn to_camel_case(text: &str) -> String {
-    println!("{:?}", &text.chars());
-    text.to_string()
+    text.to_string();
+    let mut counter = 0;
+
+    text.split(&['_', '-']);
+
+    for i in text.chars() {
+        if i == '-' || i == '_' {
+            text.split(i, "");
+        }
+        counter += 1;
+    }
 }
