@@ -6,12 +6,15 @@ fn main() {
 
 fn to_camel_case(text: &str) -> String {
     let mut vecky: Vec<char> = text.chars().collect();
-    for i in vecky.iter() {
+    let mut index = 0;
+    for i in vecky.clone().iter() {
         if *i == '-' || *i == '_' {
-            vecky.remove(vecky.get(*i).unwrap());
+            vecky.remove(index);
+            vecky[index] = vecky[index].to_ascii_uppercase();
             // text.split(*i).collect::<Vec<&str>>();
             println!("{:?}", vecky);
         }
+        index += 1;
     }
     // text.to_camel_case().to_string()
     // text.to_string();
