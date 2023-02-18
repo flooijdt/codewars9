@@ -5,7 +5,15 @@ fn main() {
 }
 
 fn to_camel_case(text: &str) -> String {
-    text.to_camel_case().to_string()
+    let mut vecky: Vec<char> = text.chars().collect();
+    for i in vecky.iter() {
+        if *i == '-' || *i == '_' {
+            vecky.remove(vecky.get(*i).unwrap());
+            // text.split(*i).collect::<Vec<&str>>();
+            println!("{:?}", vecky);
+        }
+    }
+    // text.to_camel_case().to_string()
     // text.to_string();
     // let mut counter = 0;
 
@@ -17,10 +25,10 @@ fn to_camel_case(text: &str) -> String {
     // println!("{:?}", vecky);
 
     // for i in text.chars() {
-    //     if i == '-' || i == '_' {
-    //         text.split(i, "");
-    //     }
+    // if i == '-' || i == '_' {
+    //     text.split(i, "");
+    // }
     //     counter += 1;
     // }
-    // "fim".to_string()
+    "fim".to_string()
 }
