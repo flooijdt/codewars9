@@ -1,20 +1,20 @@
 use inflector::Inflector;
 
 fn main() {
-    println!("Hello, world!");
-    to_camel_case("ave_maria");
+    println!("{:?}", to_camel_case("ave_maria"));
 }
 
 fn to_camel_case(text: &str) -> String {
-    text.to_string();
-    let mut counter = 0;
+    text.to_camel_case().to_string()
+    // text.to_string();
+    // let mut counter = 0;
 
-    let mut vecky: Vec<&str> = text.split(&['_', '-']).collect();
-    for i in &vecky {
-        println!("{:?}", i.to_camel_case());
-    }
+    // let mut vecky: Vec<&str> = text.split(&['_', '-']).collect();
+    // for i in &vecky {
+    //     println!("{:?}", i.to_camel_case());
+    // }
 
-    println!("{:?}", vecky);
+    // println!("{:?}", vecky);
 
     // for i in text.chars() {
     //     if i == '-' || i == '_' {
@@ -22,5 +22,5 @@ fn to_camel_case(text: &str) -> String {
     //     }
     //     counter += 1;
     // }
-    "fim".to_string()
+    // "fim".to_string()
 }
