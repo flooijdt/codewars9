@@ -1,7 +1,7 @@
 use inflector::Inflector;
 
 fn main() {
-    println!("{:?}", to_camel_case("ave_maria"));
+    println!("{:?}", to_camel_case("Ave_maria"));
 }
 
 fn to_camel_case(text: &str) -> String {
