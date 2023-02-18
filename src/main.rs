@@ -9,8 +9,8 @@ fn to_camel_case(text: &str) -> String {
     let mut index = 0;
     for i in vecky.clone().iter() {
         if *i == '-' || *i == '_' {
-            vecky[index + 1] = vecky[index + 1].to_ascii_uppercase();
-            vecky.remove(index);
+            vecky[index.clone() + 1] = vecky[index.clone() + 1].to_ascii_uppercase();
+            vecky.remove(index.clone());
         }
         index += 1;
     }
