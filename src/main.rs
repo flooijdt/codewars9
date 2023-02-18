@@ -1,7 +1,7 @@
 use inflector::Inflector;
 
 fn main() {
-    println!("{:?}", to_camel_case("Ave_maria"));
+    println!("{:?}", to_camel_case("the_stealth_warrior"));
 }
 
 fn to_camel_case(text: &str) -> String {
@@ -11,27 +11,8 @@ fn to_camel_case(text: &str) -> String {
         if *i == '-' || *i == '_' {
             vecky.remove(index);
             vecky[index] = vecky[index].to_ascii_uppercase();
-            // text.split(*i).collect::<Vec<&str>>();
-            println!("{:?}", vecky);
         }
         index += 1;
     }
-    // text.to_camel_case().to_string()
-    // text.to_string();
-    // let mut counter = 0;
-
-    // let mut vecky: Vec<&str> = text.split(&['_', '-']).collect();
-    // for i in &vecky {
-    //     println!("{:?}", i.to_camel_case());
-    // }
-
-    // println!("{:?}", vecky);
-
-    // for i in text.chars() {
-    // if i == '-' || i == '_' {
-    //     text.split(i, "");
-    // }
-    //     counter += 1;
-    // }
-    "fim".to_string()
+    vecky.into_iter().collect::<String>()
 }
